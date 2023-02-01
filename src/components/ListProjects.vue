@@ -1,9 +1,14 @@
 <!-- contatterà l'API -->
 
 <script>
+    import CardProject from "./CardProject.vue";
     import axios from "axios"; //importo axios 
+
     export default {
         name:'ListProjects',
+        components: {
+            CardProject
+        },
         data() {
             return {
                 projects : [],
@@ -20,12 +25,14 @@
 
 <template>
     <section>
-        <h2>Project List</h2> 
-        <ul>
-            <li v-for="project in projects">
-                {{ project.title }}
-            </li>
-        </ul>
+        <div class="container">
+            <h2>Project List</h2> 
+            <div class="row ">
+                <div class="col md-4" v-for="project in projects">
+                   <CardProject :data="project"/> 
+                </div>
+            </div>
+        </div>
     </section>
 </template>
 
