@@ -13,7 +13,7 @@
 </script>
 
 <template>
-    <div class="card h-100" style="width: 18rem;">
+    <div class="card h-100 w-100" style="width: 18rem;">
         <img v-if="data.image_url" :src="data.image_url" class="card-img-top" :alt="data.title">
         <div class="card-body">
             <h5 class="card-title">{{data.title}}</h5>
@@ -26,12 +26,13 @@
                 <p v-else>Type: No Type</p>
             </div>
             <div class="card-text">
-                Technology:
                 <div v-if="data.technologies.length > 0">
+                    Technology:
                     <span class="badge text-bg-dark me-1" v-for="technology in data.technologies">{{technology.name}}</span>
                 </div>
                 <div v-else>
-                    <span class="badge text-bg-dark" >No Technology</span>
+                    Technology:
+                    <span class="badge text-bg-dark me-1" >No Technology</span>
                 </div>
             </div>
         </div>

@@ -27,8 +27,8 @@
     <section>
         <div class="container">
             <h2>Project List</h2> 
-            <div class="row gy-3">
-                <div class="col-md-3" v-for="project in projects">
+            <div class="row gy-4">
+                <div class="col-md-4" v-for="project in projects">
                    <CardProject :data="project"/> 
                 </div>
             </div>
