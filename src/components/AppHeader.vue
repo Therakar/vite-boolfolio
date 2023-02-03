@@ -10,9 +10,9 @@ export default {
       <h1>Logo</h1>
       <nav>
         <ul class="d-flex list-unstyled">
-          <li><router-link to="/">Home Page</router-link></li>
-          <li><router-link to="/about-us">About Us</router-link></li>
-          <li><router-link to="/list-projects">Project List</router-link></li>
+          <li><router-link :to="{name: 'home'}">Home Page</router-link></li>
+          <li><router-link :to="{name: 'about-us'}">About Us</router-link></li>
+          <li><router-link :to="{name: 'list-projects'}">Project List</router-link></li>
         </ul>
       </nav>
     </div>
