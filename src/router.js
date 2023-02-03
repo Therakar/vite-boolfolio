@@ -4,6 +4,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomePage from './pages/HomePage.vue';
 import AboutUs from './pages/AboutUs.vue';
 import ListProjects from './components/ListProjects.vue';
+import Page404 from './pages/Page404.vue';
+import SingleProject from './pages/SingleProject.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -22,6 +24,16 @@ const router = createRouter({
             path: '/list-projects',
             name: 'list-projects',
             component: ListProjects,
+        },
+        {
+            path: '/project/:slug',
+            name: 'single-project',
+            component: SingleProject,
+        },
+        {
+            path:"/:pathMatch(.*)*", //catch all, va messa sempre per ultima
+            name: "page-404",
+            component: Page404,
         }
     ]
 })
