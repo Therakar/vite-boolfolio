@@ -32,10 +32,12 @@
                 </div>
                 <div v-else>
                     Technology:
-                    <span class="badge text-bg-dark me-1" >No Technology</span>
+                    <span class="badge text-bg-dark" >No Technology</span>
                 </div>
             </div>
+            <a href="#" class="btn btn-primary mt-2">INFO</a>
         </div>
+        
     </div>
 
 </template>
