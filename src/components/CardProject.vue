@@ -35,7 +35,7 @@
                     <span class="badge text-bg-dark" >No Technology</span>
                 </div>
             </div>
-            <a href="#" class="btn btn-primary mt-2">INFO</a>
+            <router-link :to="{name: 'single-project', params: {slug: data.slug}}" class="btn btn-primary">INFO</router-link>
         </div>
         
     </div>
