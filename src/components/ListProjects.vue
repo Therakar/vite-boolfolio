@@ -26,7 +26,7 @@
 <template>
     <section>
         <div class="container">
-            <h2>Project List</h2> 
+            <h2 class="mb-5">Project List</h2> 
             <div class="row gy-4">
                 <div class="col-md-4" v-for="project in projects">
                    <CardProject :data="project"/> 
@@ -37,5 +37,7 @@
 </template>
 
 <style lang="scss" scoped>
-
+    .container{
+        margin-top: 9.375rem;
+    }
 </style>

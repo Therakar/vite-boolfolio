@@ -1,16 +1,15 @@
 <script>
     export default {
-        name:'AboutUs',
+        name: "ContactUs",
+
+        
     }
 </script>
 
 <template>
-    <section>
-        <div class="container">
-            <h1>ABOUT US</h1>
-        </div>
-        
-    </section>
+    <div class="container">
+        <h1>CONTACTS</h1>
+    </div>
 </template>
 
 <style lang="scss" scoped>

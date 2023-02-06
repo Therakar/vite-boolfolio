@@ -12,13 +12,16 @@ export default {
 </script>
 
 <template>
-  <div>
+  <body>
     <AppHeader />
     <AppMain />
     <AppFooter />
-  </div>
+  </body>
 </template>
 
 <style lang="scss">
-@import "./style/global.scss";
+  @import "./style/global.scss";
+  body{
+    background-color: #0D1117;
+  }
 </style>

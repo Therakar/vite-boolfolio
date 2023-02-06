@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomePage from './pages/HomePage.vue';
 import AboutUs from './pages/AboutUs.vue';
 import ListProjects from './components/ListProjects.vue';
+import Contacts from './pages/ContactUs.vue';
 import Page404 from './pages/Page404.vue';
 import SingleProject from './pages/SingleProject.vue';
 
@@ -24,6 +25,11 @@ const router = createRouter({
             path: '/list-projects',
             name: 'list-projects',
             component: ListProjects,
+        },
+        {
+            path: '/contact-us',
+            name: 'contact-us',
+            component: Contacts,
         },
         {
             path: '/project/:slug',

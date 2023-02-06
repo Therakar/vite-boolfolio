@@ -13,10 +13,10 @@
 </script>
 
 <template>
-    <div class="card h-100 w-100" style="width: 18rem;">
+    <div class="card text-white bg-dark h-100 w-100" style="width: 18rem;">
         <img v-if="data.image_url" :src="data.image_url" class="card-img-top" :alt="data.title">
-        <div class="card-body">
-            <h5 class="card-title">{{data.title}}</h5>
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title mb-3">{{data.title}}</h5>
             <p class="card-text">Description: {{ truncateText(data.description) }}</p>
             <p class="card-text">Version: v{{ data.version }}</p>
             <p class="card-text">Customer: {{ data.customer }}</p>
@@ -28,14 +28,14 @@
             <div class="card-text">
                 <div v-if="data.technologies.length > 0">
                     Technology:
-                    <span class="badge text-bg-dark me-1" v-for="technology in data.technologies">{{technology.name}}</span>
+                    <span class="badge text-bg-success me-1 mb-5" v-for="technology in data.technologies">{{technology.name}}</span>
                 </div>
                 <div v-else>
                     Technology:
-                    <span class="badge text-bg-dark" >No Technology</span>
+                    <span class="badge text-bg-danger mb-5">No Technology</span>
                 </div>
             </div>
-            <router-link :to="{name: 'single-project', params: {slug: data.slug}}" class="btn btn-primary">INFO</router-link>
+            <router-link :to="{name: 'single-project', params: {slug: data.slug}}" class="btn btn-primary mt-auto"><strong>More Info</strong></router-link>
         </div>
         
     </div>
